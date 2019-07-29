@@ -1,0 +1,26 @@
+{
+  "name": "sabershores_stamps",
+  "version": "1.0.0",
+  "description": "Gets a list of in-stock leather stamps. Connects to a micronDB_node instance.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trillobite/sabershores_stamps.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trillobite/sabershores_stamps/issues"
+  },
+  "homepage": "https://github.com/trillobite/sabershores_stamps#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "json-parser": "^3.1.2",
+    "promise": "^8.0.3",
+    "request": "^2.88.0"
+  }
+}
