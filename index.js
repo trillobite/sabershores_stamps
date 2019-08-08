@@ -68,9 +68,21 @@ app.get("/stamps", jsonParser, (req, res) => {
 
 });
 
-app.get("/image/:id", jsonParser, (req, res) => {
-    db.get(req.params.id);
-    res.send(req.body);
+app.get("/stamps/:id", jsonParser, (req, res) => {
+    let indexQuery = {
+        where: {
+            id: req.params.id,
+        }
+    };
+
+    request({
+        url: dbURL + "/query",
+        method: "GET",
+        json: true,
+        body: indexQuery
+    }, (err, response, body) => {
+        res.send(body);
+    });
 });
 
 app.listen(port, () => {
